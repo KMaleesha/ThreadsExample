@@ -23,11 +23,11 @@ public class practice {
 //         int total = thread1.sum + thread2.sum + thread3.sum + thread4.sum;
 //         System.out.println(total);
 
-        List<Thread2> threads = new ArrayList<>();
-        threads.add(new Thread2(0,3,arr));
-        threads.add(new Thread2(4,7, arr));
-        threads.add(new Thread2(8,11,arr));
-        threads.add(new Thread2(12,15,arr));
+        List<Thread1> threads = new ArrayList<>();
+        threads.add(new Thread1(0,3,arr));
+        threads.add(new Thread1(4,7, arr));
+        threads.add(new Thread1(8,11,arr));
+        threads.add(new Thread1(12,15,arr));
 
         for (Thread thread : threads) {
             thread.start();
@@ -37,7 +37,7 @@ public class practice {
         }
 
         int Total = 0;
-        for (Thread2 thread1 : threads) {
+        for (Thread1 thread1 : threads) {
             Total = Total + thread1.sum;
         }
         System.out.println(Total);
