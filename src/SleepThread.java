@@ -23,8 +23,12 @@ class SleepThreadInterruption extends Thread{
             Thread.sleep(5000);
             System.out.println(Thread.currentThread().getState());
         }catch (InterruptedException e){
+            System.out.println(Thread.currentThread().getState());
             System.out.println("Sleep interrupted");
         }
+
+        System.out.println(Thread.currentThread().getState());
+        System.out.println("Wake up");
 
 //        for(int i=0; i<10; i++){
 //            try {
