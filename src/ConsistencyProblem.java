@@ -9,14 +9,41 @@ public class ConsistencyProblem {
     }
 }
 
+//synchronized method
+//class Printer{
+//    public synchronized void print(String name){
+//        for(int i=0; i<10; i++){
+//            System.out.println(name);
+//            try {
+//                Thread.sleep(500);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+//}
+
+//synchronized block
 class Printer{
-    public synchronized void print(String name){
+    public void print(String name){
+
         for(int i=0; i<10; i++){
-            System.out.println(name);
+            System.out.println("my name is "+name);
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            }
+        }
+
+        synchronized (this){
+            for(int i=0; i<10; i++){
+                System.out.println(name);
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
