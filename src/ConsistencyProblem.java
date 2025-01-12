@@ -10,7 +10,7 @@ public class ConsistencyProblem {
 }
 
 class Printer{
-    public void print(String name){
+    public synchronized void print(String name){
         for(int i=0; i<10; i++){
             System.out.println(name);
             try {
