@@ -2,6 +2,7 @@ public class DefaultMethodExample1 {
     public static void main(String[] args) {
         MyC myC = new MyC();
         myC.greetMe();
+        MyD.greetMe();
     }
 }
 
@@ -14,6 +15,12 @@ interface MyA{
 interface MyB{
     default void greetMe(){
         System.out.println("Hello Maleesha");
+    }
+}
+
+interface MyD{
+    static void greetMe(){
+        System.out.println("Hello Tharuprabha");
     }
 }
 
