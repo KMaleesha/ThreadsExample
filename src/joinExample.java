@@ -20,7 +20,7 @@ public class joinExample {
 
 class MyJoinThread extends Thread {
     public void run() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             try{
                 Thread.sleep(1000);
                 System.out.println(i);
@@ -28,5 +28,6 @@ class MyJoinThread extends Thread {
                 e.printStackTrace();
             }
         }
+        System.out.println(getState());
     }
 }

@@ -12,10 +12,10 @@ public class SleepThread {
 class SleepThreadInterruption extends Thread{
     public void run(){
 
-        long startTime = System.currentTimeMillis();
-        while(System.currentTimeMillis() < startTime + 5000){
-            //System.out.println(Thread.currentThread().getName());
-        }
+//        long startTime = System.currentTimeMillis();
+////        while(System.currentTimeMillis() < startTime + 5000){
+////            System.out.println(Thread.currentThread().getName());
+////        }
 
         System.out.println("After 5 Seconds");
 
